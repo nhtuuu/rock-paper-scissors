@@ -32,13 +32,12 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("What's your weapon?");
-        let computerSelection = getComputerChoice();
-        let result = playRound(playerSelection, computerSelection); 
-        console.log(result);
-    }
+function game(e) {
+    let playerSelection = e.target.innerText;
+    console.log(playerSelection);
+    let computerSelection = getComputerChoice();
+    let result = playRound(playerSelection, computerSelection); 
+    console.log(result);
 }
 
 function finalScore() {
@@ -50,3 +49,6 @@ function finalScore() {
     console.log("It's a tie!");
     } 
 }
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach(button => button.addEventListener("click", game));
