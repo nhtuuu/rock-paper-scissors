@@ -28,22 +28,30 @@ function playRound(playerSelection, computerSelection) {
         humanScore += 1;
         return "You Win! Scissors beats Paper.";
     } else {
-        return (playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase()) + " Draw! Let's play again."; 
+        return ("Computer also took " + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase()) + "!" + " Draw! Let's play again."; 
     }
 }
 
 function game(e) {
+    document.getElementById("result").innerHTML = "";
     let playerSelection = e.target.innerText;
     console.log(playerSelection);
     let computerSelection = getComputerChoice();
     let result = playRound(playerSelection, computerSelection); 
     console.log(result);
+    const para = document.createElement("p");
+    const content = document.createTextNode(result);
+    para.appendChild(content);
+    const displayResult = document.getElementById("result");
+    displayResult.appendChild(para);
+    document.getElementById("human").innerText = "Human: " + humanScore;
+    document.getElementById("computer").innerText = "Computer: " + computerScore;
 }
 
 function finalScore() {
-    if (humanScore > computerScore) {
+    if (humanScore === 5) {
     console.log("You win!");
-    } else if (humanScore < computerScore) {
+    } else if (computerScore === 5) {
     console.log("You lose!");
     } else {
     console.log("It's a tie!");
