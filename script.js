@@ -1,5 +1,7 @@
 const option = ["rock", "paper", "scissors"];
 const computerSelection = getComputerChoice();
+const endgameModal = document.getElementById('endgameModal');
+const overlay = document.getElementById('overlay');
 let humanScore = 0;
 let computerScore = 0;
 
@@ -32,6 +34,17 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function finalMessage() {
+    return (humanScore > computerScore)
+    ? alert("You won!")
+    : alert("You lost!");
+}
+
+function openEndgameModal() {
+    endgameModal.classList.add('active');
+    overlay.classList.add('active');
+  }
+
 function game(e) {
     document.getElementById("result").innerHTML = "";
     let playerSelection = e.target.innerText;
@@ -46,17 +59,11 @@ function game(e) {
     displayResult.appendChild(para);
     document.getElementById("human").innerText = "Human: " + humanScore;
     document.getElementById("computer").innerText = "Computer: " + computerScore;
+    if (humanScore === 5 || computerScore === 5) {
+        openEndgameModal();
+        finalMessage();
+        } 
 }
 
-function finalScore() {
-    if (humanScore === 5) {
-    console.log("You win!");
-    } else if (computerScore === 5) {
-    console.log("You lose!");
-    } else {
-    console.log("It's a tie!");
-    } 
-}
-
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".buttonPlay");
 buttons.forEach(button => button.addEventListener("click", game));

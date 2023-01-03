@@ -12,10 +12,15 @@
     <h3>First to score 5 points wins the game</h3>
     <p id="human"></p>
     <p id="computer"></p>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <button class="buttonPlay" id="rock">Rock</button>
+    <button class="buttonPlay" id="paper">Paper</button>
+    <button class="buttonPlay" id="scissors">Scissors</button>
     <div id="result"></div>
+    <div class="modal" id="endgameModal">
+        <p class="modal-title" id="endgameMsg"></p>
+        <button class="btn btn-restart" id="restartBtn">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
     <script src="script.js"></script>
 </body>
 </html>
