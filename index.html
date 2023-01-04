@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>ROCK PAPER SCISSORS</h1>
     <h2>What is your weapon?</h2>
     <h3>First to score 5 points wins the game</h3>
-    <p id="human"></p>
-    <p id="computer"></p>
-    <button class="buttonPlay" id="rock">Rock</button>
-    <button class="buttonPlay" id="paper">Paper</button>
-    <button class="buttonPlay" id="scissors">Scissors</button>
+    <div class="sign" id="playerSign">❔</div>
+    <p id="human">Human: 0</p>
+    <div class="sign" id="computerSign">❔</div>
+    <p id="computer">Computer: 0</p>
+    <div class="buttons">
+        <button class="btn btn-square sign buttonPlay" id="rock">✊</button>
+        <button class="btn btn-square sign buttonPlay" id="paper">✋</button>
+        <button class="btn btn-square sign buttonPlay" id="scissors">✌</button>
+    </div>
     <div id="result"></div>
     <div class="modal" id="endgameModal">
         <p class="modal-title" id="endgameMsg"></p>

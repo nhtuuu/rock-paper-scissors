@@ -1,9 +1,17 @@
 const option = ["rock", "paper", "scissors"];
 const computerSelection = getComputerChoice();
-const endgameModal = document.getElementById('endgameModal');
-const overlay = document.getElementById('overlay');
+const humanScorePara = document.getElementById("human");
+const computerScorePara = document.getElementById("computer");
+const playerSign = document.getElementById("playerSign");
+const computerSign = document.getElementById("computerSign");
+const endgameMsg = document.getElementById("endgameMsg");
+const endgameModal = document.getElementById("endgameModal");
+const overlay = document.getElementById("overlay");
+const restartBtn = document.getElementById("restartBtn");
 let humanScore = 0;
 let computerScore = 0;
+
+restartBtn.addEventListener("click", restartGame);
 
 function getComputerChoice() {
     let i = Math.floor(Math.random() * 3);
@@ -36,20 +44,27 @@ function playRound(playerSelection, computerSelection) {
 
 function finalMessage() {
     return (humanScore > computerScore)
-    ? alert("You won!")
-    : alert("You lost!");
+    ? (endgameMsg.textContent = "You won!")
+    : (endgameMsg.textContent = "You lost...")
 }
 
 function openEndgameModal() {
-    endgameModal.classList.add('active');
-    overlay.classList.add('active');
+    endgameModal.classList.add("active");
+    overlay.classList.add("active");
   }
 
 function game(e) {
     document.getElementById("result").innerHTML = "";
-    let playerSelection = e.target.innerText;
+    let playerSelection = e.target.id;
     console.log(playerSelection);
     let computerSelection = getComputerChoice();
+    if (playerSelection === "rock") {
+        playerSign.textContent = "✊";
+    } else if (playerSelection === "paper"){
+        playerSign.textContent = "✋";
+    } else {
+        playerSign.textContent = "✌";
+    }
     let result = playRound(playerSelection, computerSelection); 
     console.log(result);
     const para = document.createElement("p");
@@ -64,6 +79,16 @@ function game(e) {
         finalMessage();
         } 
 }
+
+function restartGame() {
+    humanScore = 0;
+    computerScore = 0;
+    humanScorePara.textContent = "Human: 0";
+    computerScorePara.textContent = "Computer: 0";
+    endgameModal.classList.remove("active");
+    overlay.classList.remove("active");
+    
+  }
 
 const buttons = document.querySelectorAll(".buttonPlay");
 buttons.forEach(button => button.addEventListener("click", game));
