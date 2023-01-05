@@ -1,0 +1,47 @@
+[33mcommit 5ea29472fca67ad833be0a08051d46668b73029f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Felix Nguyen <nht.ignis@gmail.com>
+Date:   Thu Jan 5 23:07:13 2023 +1100
+
+    Done
+
+[33mcommit af1ac8c901c57a1167eb0817f5f42cfffe5f2983[m
+Author: Felix Nguyen <nht.ignis@gmail.com>
+Date:   Thu Jan 5 00:19:07 2023 +1100
+
+    Add UX/UI
+
+[33mcommit 0bd5b7434d27f5d86dac92534cfbe8d908338bc3[m[33m ([m[1;31morigin/rps-ui[m[33m)[m
+Author: Felix Nguyen <nht.ignis@gmail.com>
+Date:   Wed Jan 4 00:15:48 2023 +1100
+
+    Add alert when game is over
+
+[33mcommit aca907befccf0fbe279b3df2e997268e7463f97f[m
+Author: Felix Nguyen <nht.ignis@gmail.com>
+Date:   Tue Jan 3 00:04:08 2023 +1100
+
+    Add more rule to game function
+
+[33mcommit 594db035dd48d3ff52c65a567aa24b813a84ef86[m
+Author: Felix Nguyen <nht.ignis@gmail.com>
+Date:   Fri Dec 30 23:47:43 2022 +1100
+
+    Remove 5 round limit, create 3 buttons and add even listener for them
+
+[33mcommit 835c358465ec81ba02a0a3160ce7c5fc9fb617f6[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Felix Nguyen <nht.ignis@gmail.com>
+Date:   Fri Dec 16 22:28:15 2022 +1100
+
+    Add main function
+
+[33mcommit 47e459a764d5d79d3769c1dd7b8abcbd184d8b27[m
+Author: Felix Nguyen <nht.ignis@gmail.com>
+Date:   Wed Dec 14 23:11:09 2022 +1100
+
+    Link js to html
+
+[33mcommit 9d6e2f843456a3b9515ab9e46f302ce9dfe75c61[m
+Author: Felix Nguyen <nht.ignis@gmail.com>
+Date:   Wed Dec 14 23:07:20 2022 +1100
+
+    Create initial files
