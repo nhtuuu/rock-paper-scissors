@@ -65,6 +65,13 @@ function game(e) {
     } else {
         playerSign.textContent = "✌";
     }
+    if (computerSelection === "rock") {
+        computerSign.textContent = "✊";
+    } else if (computerSelection === "paper"){
+        computerSign.textContent = "✋";
+    } else {
+        computerSign.textContent = "✌";
+    }
     let result = playRound(playerSelection, computerSelection); 
     console.log(result);
     const para = document.createElement("p");
